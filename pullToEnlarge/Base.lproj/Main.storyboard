@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jbf-Rz-49w"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dX-0K-9Zt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SuH-fD-ocn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="M2k-cG-101"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-4N-0ER">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="MmG-JV-Q8J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Dlg-XT-xvk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tLH-4N-0ER" firstAttribute="top" secondItem="SuH-fD-ocn" secondAttribute="bottom" id="AOC-tq-ltk"/>
+                            <constraint firstItem="0dX-0K-9Zt" firstAttribute="top" secondItem="tLH-4N-0ER" secondAttribute="bottom" id="Sd8-wF-2Ty"/>
+                            <constraint firstItem="SuH-fD-ocn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VpC-Wk-wKU"/>
+                            <constraint firstAttribute="trailing" secondItem="tLH-4N-0ER" secondAttribute="trailing" id="YH4-eT-eQh"/>
+                            <constraint firstItem="SuH-fD-ocn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dL3-n0-fir"/>
+                            <constraint firstItem="tLH-4N-0ER" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eN7-5C-Hty"/>
+                            <constraint firstAttribute="trailing" secondItem="SuH-fD-ocn" secondAttribute="trailing" id="i2E-PB-8xN"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="igHeight" destination="M2k-cG-101" id="LyJ-qd-374"/>
+                        <outlet property="igTopCons" destination="VpC-Wk-wKU" id="rbl-gg-7pJ"/>
+                        <outlet property="imageView" destination="SuH-fD-ocn" id="Npe-u8-2qA"/>
+                        <outlet property="tableView" destination="tLH-4N-0ER" id="VFZ-rt-Ogz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.8125" y="136.79577464788733"/>
+        </scene>
+    </scenes>
+</document>
